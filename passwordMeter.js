@@ -1,7 +1,7 @@
-var password = document.getElementById("password");
+var password = document.getElementById('password');
 
 password.addEventListener('keyup', function(){
-	var passwordArray = password.value.split("");
+	var passwordArray = password.value.split('');
 
 	var rating = {
 		specialChar: 0,
@@ -15,16 +15,17 @@ password.addEventListener('keyup', function(){
 			var pattern = /^\d+$/;
 			return pattern.test(val);
 		},
-		isSpecialChar: function(val){
-
+		isLowercase: function(val){
+			var pattern = /[a-z]/;
+			return pattern.test(val);
 		}
 	}
 
-	console.log(passwordArray);
-
 	for (var i=0; i<passwordArray.length; i++){
 		if (validation.isNumber(passwordArray[i])){
-			rating.numbers++;
+			rating.numbers = 1;
+		} else if (validation.isLowercase(passwordArray[i])){
+			rating.lowercase = 1;
 		}
 	}
 });
