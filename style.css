@@ -18,13 +18,13 @@ input {
 }
 
 .weakPassword {
-	background-color: red;
+	background-color: #EF1111;
 }
 
 .moderatePassword {
-	background-color: yellow;
+	background-color: #FFC700;
 }
 
 .strongPassword {
-	background-color: green;
+	background-color: #22BA3E;
 }
