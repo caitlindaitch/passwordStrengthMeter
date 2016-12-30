@@ -1,4 +1,30 @@
+body {
+	font-family: helvetica;
+}
+
 input {
-	display: block;
+	display: inline-block;
+	height: 25px;
 	margin: 10px;
+}
+
+.rating {
+	font-weight: bold;
+	border-radius: 3px;
+	color: white;
+	display: inline-block;
+	padding: 5px;
+	text-transform: uppercase;
+}
+
+.weakPassword {
+	background-color: red;
+}
+
+.moderatePassword {
+	background-color: yellow;
+}
+
+.strongPassword {
+	background-color: green;
 }
