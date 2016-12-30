@@ -18,6 +18,10 @@ password.addEventListener('keyup', function(){
 		isLowercase: function(val){
 			var pattern = /[a-z]/;
 			return pattern.test(val);
+		},
+		isUppercase: function(val){
+			var pattern = /[A-Z]/;
+			return pattern.test(val);
 		}
 	}
 
@@ -26,6 +30,12 @@ password.addEventListener('keyup', function(){
 			rating.numbers = 1;
 		} else if (validation.isLowercase(passwordArray[i])){
 			rating.lowercase = 1;
+		} else if (validation.isUppercase(passwordArray[i])){
+			rating.uppercase = 1;
 		}
 	}
+
+	console.log("Uppercase " + rating.uppercase);
+	console.log("Lowercase " + rating.lowercase);
+	console.log("Numbers " + rating.numbers);
 });
